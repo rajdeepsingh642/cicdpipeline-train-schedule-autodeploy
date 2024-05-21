@@ -6,7 +6,9 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
-             git 'https://github.com/rajdeepsingh642/cicdpipeline-train-schedule-autodeploy.git'    
+             git 'https://github.com/rajdeepsingh642/cicdpipeline-train-schedule-autodeploy.git'   
+            }
+        } 
         stage('Build') {
             steps {
                 echo 'Running build automation'
