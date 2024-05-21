@@ -2,6 +2,7 @@ pipeline {
     agent any
     tools{
         jdk "jdk17"
+        gradle "gradle"
     }
     stages {
         stage('git checkout') {
@@ -15,8 +16,13 @@ pipeline {
                 sh './gradlew build --no-daemon'
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
+      
+      
+      }
+        
+           
         }
     }
+
     
-}
-    
+ 
