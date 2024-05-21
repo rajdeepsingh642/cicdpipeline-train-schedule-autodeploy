@@ -4,6 +4,9 @@ pipeline {
         jdk "jdk17"
     }
     stages {
+        stage('git checkout') {
+            steps {
+             git 'https://github.com/rajdeepsingh642/cicdpipeline-train-schedule-autodeploy.git'    
         stage('Build') {
             steps {
                 echo 'Running build automation'
